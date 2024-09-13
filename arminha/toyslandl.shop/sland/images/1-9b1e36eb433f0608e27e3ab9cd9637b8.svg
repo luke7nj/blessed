@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 160">
+    <style>
+        @keyframes a0_t {
+            0% {
+                transform: translate(28.8px, 35.2px) scale(.4, .4) translate(-72px, -88px);
+                animation-timing-function: cubic-bezier(.4, 0, .6, 1);
+            }
+
+            50% {
+                transform: translate(28.8px, 105.6px) scale(.4, .4) translate(-72px, -88px);
+                animation-timing-function: cubic-bezier(.4, 0, .6, 1);
+            }
+
+            100% {
+                transform: translate(28.8px, 35.2px) scale(.4, .4) translate(-72px, -88px);
+            }
+        }
+    </style>
+    <g transform="translate(21.2,9.6)">
+        <g transform="translate(28.8,35.2) scale(.4,.4) translate(-72,-88)"
+            style="animation: 2s linear infinite both a0_t;">
+            <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"
+                d="M72 0v176" />
+            <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"
+                d="M0 104l72 72l72-72" />
+        </g>
+    </g>
+</svg>
